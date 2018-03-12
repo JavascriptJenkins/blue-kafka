@@ -51,25 +51,25 @@ public class KafkaConfig {
     ///////////////////////////////// PRODUCER CODE IS BELOW ////////////////////////////////////////
 
 
-    @Bean
-    ProducerFactory<String, String> producerFactory() {
-        return new DefaultKafkaProducerFactory(producerConfigs());
-    }
-
-    @Bean
-    Map<String, Object> producerConfigs() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        // See https://kafka.apache.org/documentation/#producerconfigs for more properties
-        return props;
-    }
-
-    @Bean
-    KafkaTemplate<String, String> kafkaTemplate() {
-        return new KafkaTemplate<>(producerFactory());
-    }
+//    @Bean
+//    ProducerFactory<String, String> producerFactory() {
+//        return new DefaultKafkaProducerFactory(producerConfigs());
+//    }
+//
+//    @Bean
+//    Map<String, Object> producerConfigs() {
+//        Map<String, Object> props = new HashMap<>();
+//        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+//        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+//        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+//        // See https://kafka.apache.org/documentation/#producerconfigs for more properties
+//        return props;
+//    }
+//
+//    @Bean
+//    KafkaTemplate<String, String> kafkaTemplate() {
+//        return new KafkaTemplate<>(producerFactory());
+//    }
 
 
 }
